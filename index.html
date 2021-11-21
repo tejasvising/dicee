@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styledice.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+     <button onclick="ran()"> <h1>Refresh Me</h1></button>
+<br>
+<div id="res"></div>
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="">
+      </div>
+
+    </div>
+<script>
+  function ran(){
+  a=Math.random()*6+1;
+  b=Math.floor(a);
+  if(b==1){
+    document.getElementsByTagName('img')[0].src="img/images/dice1.png";
+  }
+  if(b==2){
+    document.getElementsByTagName('img')[0].src="img/images/dice2.png";
+  }
+  if(b==3){
+    document.getElementsByTagName('img')[0].src="img/images/dice3.png";
+  }
+  if(b==4){
+    document.getElementsByTagName('img')[0].src="img/images/dice4.png";
+  }
+  if(b==5){
+    document.getElementsByTagName('img')[0].src="img/images/dice5.png";
+  }
+  if(b==6){
+    document.getElementsByTagName('img')[0].src="img/images/dice6.png";
+  }
+  
+console.log(b);
+c=Math.random()*6+1;
+  d=Math.floor(c);
+  if(d==1){
+    document.getElementsByTagName('img')[1].src="img/images/dice1.png";
+  }
+  if(d==2){
+    document.getElementsByTagName('img')[1].src="img/images/dice2.png";
+  }
+  if(d==3){
+    document.getElementsByTagName('img')[1].src="img/images/dice3.png";
+  }
+  if(d==4){
+    document.getElementsByTagName('img')[1].src="img/images/dice4.png";
+  }
+  if(d==5){
+    document.getElementsByTagName('img')[1].src="img/images/dice5.png";
+  }
+  if(d==6){
+    document.getElementsByTagName('img')[1].src="img/images/dice6.png";
+  }
+  if(b>d){
+  document.getElementById('res').innerHTML="Player 1 wins!!!"
+}
+if(d>b){
+  document.getElementById('res').innerHTML="Player 2 wins!!!"
+}
+if(d==b){
+  document.getElementById('res').innerHTML="It's a draw!!!"
+}
+}
+
+</script>
+
+  </body>
+
+  <footer>
+    www 🎲 App Brewery 🎲 com
+  </footer>
+</html>
